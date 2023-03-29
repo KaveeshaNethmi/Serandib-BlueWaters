@@ -1,0 +1,221 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.footer {
+  @include pageSetup;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding-top: 65px;
+  padding-bottom: 35px;
+  .left {
+    align-items: left;
+
+    img {
+      width: 105.65px;
+      height: 90px;
+      margin-bottom: 36px;
+    }
+    p {
+      width: 319px;
+      font-family: $jost;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #2e2e2e;
+      margin-bottom: 36px;
+    }
+
+    .link {
+      position: absolute;
+      font-family: $jost;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      padding-bottom: 5px;
+      color: $primary-color;
+      text-transform: uppercase;
+
+      .underline-text {
+        position: relative;
+        padding-bottom: 10px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          background-color: $primary-color;
+          transition: width 0.3s ease-in-out;
+        }
+
+        &:hover:before {
+          width: 100%;
+        }
+      }
+    }
+    .icons {
+      width: 202px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .icon {
+        color: #6c6c6c;
+      }
+    }
+  }
+
+  .center {
+    @include flexContainer;
+    max-width: 333px;
+    flex: 2;
+    // justify-content: space-between;
+    gap: 111px;
+
+    h4 {
+      font-family: $jost;
+      color: $primary-color;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 19.2px;
+      line-height: 35px;
+      text-transform: capitalize;
+      padding-bottom: 30px;
+    }
+
+    .link-items {
+      text-align: left;
+
+      .item {
+        font-family: $jost;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .right {
+    justify-content: center;
+    align-items: center;
+    width: 461px;
+
+    .title1 {
+      text-align: left;
+      font-family: $rodeluxet;
+      color: $primary-color;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 56px;
+      text-transform: uppercase;
+    }
+
+    .title2 {
+      text-align: left;
+      font-family: $rodeluxet;
+      color: $primary-color;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 70px;
+      text-transform: uppercase;
+    }
+
+    .signup-form {
+      width: 461px;
+
+      form {
+        .input-field {
+          border-bottom: 1px solid #cdcdcd;
+        }
+
+        margin-top: 22px;
+        margin-bottom: 118px;
+
+        button {
+          @include flexContainer;
+          @include viewMoreBtn;
+          background-color: $primary-color;
+          color: white;
+          border: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .contact-details {
+      display: flex;
+      justify-content: space-between;
+
+      .c-item {
+        display: flex;
+
+        p {
+          font-family: $jost;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .brand-logos {
+    @include flexContainer;
+    justify-content: space-between;
+    margin-top: 125px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cdcdcd;
+
+    .brand {
+      justify-content: center;
+      align-items: center;
+
+      .text {
+        display: flex;
+        h4 {
+          width: 84px;
+        }
+        .arrow {
+          transform: translateX(10px);
+          visibility: hidden;
+          opacity: 0;
+          font-size: 50px;
+          color: #cdcdcd;
+          font-weight: 300;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+
+        .arrow {
+          visibility: visible;
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #898989;
+    text-align: center;
+    margin-top: 30px;
+    span {
+      color: #f1634c;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.main-container {
+    @include fullWidthSetup;
+    height: auto;
+    padding-bottom: 56px;
+    margin-bottom: 85px;
+    padding-top: 141px;
+    position: relative;
+z-index: 0;
+    .left {
+        @include flexContainer;
+    }
+
+    .right {
+        @include flexContainer;
+
+        .para-text {
+            width: 573px;
+            text-align: justify;
+
+            .para-title {
+                font-size: 23.04px;
+                font-weight: 500;
+                font-family: $jost;
+                line-height: 33.29px;
+                color: #2E2E2E;
+                text-transform: capitalize;
+                padding-bottom: 30px;
+            }
+
+            .para {
+                font-size: 19.2px;
+                font-weight: 400;
+                font-family: $jost;
+                line-height: 34px;
+                color: #525252;
+                padding-bottom: 30px;
+            }
+        }
+
+        .viewmore-btn {
+            @include viewMoreBtn;
+            @include flexContainer;
+        }
+    }
+}

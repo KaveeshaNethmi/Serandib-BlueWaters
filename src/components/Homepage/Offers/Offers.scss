@@ -1,0 +1,118 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.offers {
+  @include pageSetup;
+  height: auto;
+  padding-top: 97px;
+  padding-bottom: 68px;
+
+  .card {
+    position: relative;
+    outline: 1px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      background-color: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(
+        180deg,
+        rgba(29, 29, 29, 0) 54.98%,
+        rgba(29, 29, 29, 0.8) 100%
+      );
+    }
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.8);
+      background:
+        linear-gradient(
+          180deg,
+
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.3) 100%
+        );
+    }
+
+    span {
+      position: absolute;
+      top: 23px;
+      right: 22px;
+      background-color: white;
+      color: $primary-color;
+      padding: 6px 12px;
+      z-index: 3;
+      font-weight: 500;
+      font-size: 13.33px;
+      line-height: 19.26px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 150ms;
+      z-index: 2;
+
+      &:hover {
+        transform: scale(1.25);
+        .pop-up {
+          transform: translateY(0px);
+        }
+      }
+    }
+
+    .pop-up {
+      position: relative;
+      z-index: 3;
+     bottom: 60px;
+      left: 21px;
+      width: 270px;
+      height: auto;
+      font-family: $jost;
+      justify-content: left;
+      transform: translateY(535px);
+      transition: 0.5s all;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: white;
+      }
+
+      h3 {
+        font-size: 27.65px;
+        line-height: 40px;
+        font-weight: 500;
+        color: white;
+      }
+
+      .book-btn {
+        @include flexContainer;
+        @include viewMoreBtn;
+        background-color: $primary-color;
+        color: white;
+        margin-top: 25px;
+        border: none;
+      }
+
+    }
+    &:hover {
+      .pop-up {
+        opacity: 1;
+        transform: translateY(450px);
+      }
+    }
+  }
+}

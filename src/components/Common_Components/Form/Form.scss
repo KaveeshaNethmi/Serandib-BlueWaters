@@ -1,0 +1,83 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.form {
+  width: 100%;
+  height: 60px;
+  @include flexContainer;
+  bottom: 0px;
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropbtn {
+      @include flexContainer;
+      font-family: $jost;
+      height: 60px;
+      background-color: #ffffff;
+      color: $primary-color;
+      padding: 5px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-icon {
+        padding-left: 50px;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      /* Links inside the dropdown */
+      a {
+        color: $primary-color;
+        font-family: $jost;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+
+  .submit-btn {
+    @include flexContainer;
+    color: white;
+    font-family: $jost;
+    height: 60px;
+    background-color: $primary-color;
+    padding: 5px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover {
+    .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropbtn {
+      background-color: $primary-color;
+      color: white;
+    }
+
+   
+  }
+}

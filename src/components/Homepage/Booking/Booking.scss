@@ -1,0 +1,31 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.booking {
+  @include fullWidthSetup;
+  @include flexContainer;
+  height: auto;
+  padding: 110px 0;
+  background: gradient(0deg, rgba(1, 73, 81, 0.35), rgba(1, 73, 81, 0.35)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.29)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, rgba(147, 95, 56, 0.3), rgba(147, 95, 56, 0.3));
+  background-image: url(../../../assets/booking.png);
+
+  .content {
+    text-align: justify;
+    width: 987px;
+
+    .headline-text {
+      font-family: $rodeluxet;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 89px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 40px;
+    }
+  }
+}

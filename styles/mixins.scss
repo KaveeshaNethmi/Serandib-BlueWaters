@@ -1,0 +1,32 @@
+@mixin flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fullWidthSetup{
+        width: 100%;
+        max-width: 1920px;
+        justify-content: center;
+        align-items: center;
+}
+
+@mixin pageSetup {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto ;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin viewMoreBtn {
+    width: 173px;
+    height: 48px;
+    color: #01776F;
+    border: 3px solid #01776F;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 30px 10px;
+    
+}

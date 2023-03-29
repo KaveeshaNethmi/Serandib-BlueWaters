@@ -1,0 +1,66 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.Awaits {
+  height: auto;
+  padding-top: 37px;
+  padding-bottom: 68px;
+  overflow: hidden;
+ 
+  .main-text {
+    @include pageSetup;
+  }
+
+  .content {
+    width: 90%;
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    .left-sec {
+      display: flex;
+      align-items: center;
+
+      .list {
+        //width: 148px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        ul {
+          li {
+            font-family: $jost;
+            font-weight: 400;
+            font-size: 19.2px;
+            line-height: 35px;
+            color: #2e2e2e;
+            text-transform: capitalize;
+
+            &:first-child {
+              color: $primary-color;
+            }
+          }
+        }
+
+        button {
+          @include viewMoreBtn;
+          @include flexContainer;
+          background-color: $primary-color;
+          color: white;
+          margin-top: 90px;
+        }
+      }
+    }
+    .Awaits-slider {
+      width: 90%;
+      height: 100%;
+      z-index: 10;
+      .slider-img {
+        object-fit: contain;
+      }
+    }
+  }
+}

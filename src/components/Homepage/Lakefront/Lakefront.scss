@@ -1,0 +1,78 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.lakefront {
+   @include pageSetup;
+   @include flexContainer;
+    height: auto;
+    padding-top: 58px;
+    padding-bottom: 63px;
+
+    .left {
+        .para-text {
+            width: 580px;
+
+            .para {
+                font-size: 19.2px;
+                font-weight: 400;
+                font-family: $jost;
+                line-height: 34px;
+                color: #525252;
+            }
+    
+        }
+    }
+
+    .right {
+        @include flexContainer;
+        flex-direction: column;
+        flex: 2;
+        gap: 60px;
+
+        .row1 {
+            @include flexContainer;
+            justify-content: space-between;
+            width: 586px;
+
+            .item1 {
+                width: 252px;
+                height: 200px;
+                justify-content: left;
+
+                .title {
+
+                    font-size: 27.65px;
+                    font-weight: 500;
+                    font-family: $jost;
+                    line-height: 40px;
+                    color: #2E2E2E;
+                    text-transform: capitalize;
+                }
+
+                .para {
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $jost;
+                    line-height: 26px;
+                    color: #6C6C6C;
+                    text-transform: capitalize;
+                }
+            }
+            .item2 {
+                @extend .item1;
+            }
+        }
+
+        .row2 {
+            @extend .row1;
+
+            .item3 {
+                @extend .item1;
+            }
+            .item4 {
+                @extend .item1;
+            }
+        }
+    }
+    
+}
